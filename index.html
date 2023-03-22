@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マクローリン展開に関する予想</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<!-- \( マクローリン展開に関する予想 \)<br> -->
+\( 逆マクローリン変換(名前未定)の性質について \)<br><br>
+\( [1]\ マクローリン展開について \)<br>
+\(\quad 無限回微分可能な関数(C^{\infty}級関数) \ f(x) \ について,\ 以下のように表せる. \)
+\[ f(x)=\sum_{n=0}^{\infty}\frac{f^{(n)}(0)\ x^{n}}{n!} \]
+\[ (ただし,\ f^{n}(x)\ は\, f(x)\, を\, n\, 階微分した関数.) \]
+
+\( \quad 例1)\ f(x)=\sin(x)であるとき, \)
+\[ \begin{align}
+\sin(x) &= \sum_{n=0}^{\infty}\frac{\sin^{(n)}(0)\ x^{n}}{n!} \\
+ &= x-\frac{x^3}{3!}+\frac{x^5}{5!} - \cdots (-1)^{n}\frac{x^{2n+1}}{(2n+1)!} + \cdots \ .
+\end{align} \]
+
+\( \quad 例2)\ f(x)=\cos(x)であるとき, \)
+\[ \begin{align}
+\cos(x) &= \sum_{n=0}^{\infty}\frac{\cos^{(n)}(0)\ x^{n}}{n!} \\
+ &= 1-\frac{x^2}{2!}+\frac{x^4}{4!} - \cdots (-1)^{n}\frac{x^{2n}}{(2n)!} + \cdots \ . 
+\end{align} \]
+
+\( \quad 例3)\ f(x)=\ln(1+x)であるとき \, (\ \ln(x)=\log_{e}(x)\ )\, , \)
+\[ \begin{align}
+\ln(1+x) &= \sum_{n=0}^{\infty}\frac{\ln^{(n)}(1)\ x^{n}}{n!} \\
+ &= x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4} + \cdots (-1)^{n-1}\frac{x^{n}}{n!} + \cdots \ . 
+\end{align} \]
+
+\( \quad 例4)\ f(x)=\exp(x)であるとき \, (\ \exp(x)=e^{x}\ )\, , \)
+\[ \begin{align}
+\exp(x) &= \sum_{n=0}^{\infty}\frac{\exp^{(n)}(0)\ x^{n}}{n!} \\
+ &= 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\cdots +\frac{x^n}{n!} \cdots \ . 
+\end{align} \]
+
+\( \quad このように, \ マクローリン展開によって多項式でない関数を多項式の和のみで表現することができる. \)<br>
+\( \quad また,\ 式を見ることでマクローリン展開のそれぞれの項の係数は\, f(x) \, のn階導関数にx=0を代入した値によってのみ決定されることがわかる. \)<br>
+\( \quad よって,\ 次のことが言える. \)
+\[ 非負整数に対して定義される関数\ f\ (f:\mathbb{N} \longrightarrow \mathbb{R}) \ に対して, \]
+\[ f(n)=F^{(n)}(x) \]
+\[ を満たす関数\ F\ (F:\mathbb{R} \longrightarrow \mathbb{R}) \ は一意に定まる. \]
+\( \quad 以下, \ f\ に対して上のような\ F\ を求める操作を逆マクローリン変換(名前未定)と呼ぶこととする. \)<br><br>
+
+\( [2]\ まずは, 実数係数の単項式\ f_{p}(n)=an^{p} \ について考える. \ (a,\ p は \ (a, \ p \in \mathbb{R}) \ の定数 ) \)<br>
+<div style="background-color: rgb(255, 210, 210);">
+\[ (予想)\ 求める関数をF_{p}(x)\ とする. \]
+\[ F_{1}=a e^{x} x \ であり,\  F_{p+1}(x)=xF_{p}^{'}(x) \]
+</div>
+</body>
+</html>
